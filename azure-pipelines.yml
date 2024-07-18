@@ -6,6 +6,9 @@ pool:
 
 variables:
   imageName: 'pipelines-javascript-docker'
+  DOCKER_BUILDKIT: 1 
+  ##BuildKit introduces build improvements around performance, storage management, feature functionality, and security. BuildKit currently isn't supported on Windows hosts.
+  ##To enable Docker builds using BuildKit, set the DOCKER_BUILDKIT variable.
 
 steps:
 - task: Docker@2
